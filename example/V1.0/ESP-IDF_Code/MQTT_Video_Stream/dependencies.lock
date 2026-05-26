@@ -1,0 +1,111 @@
+dependencies:
+  espressif/esp32-camera:
+    component_hash: 2b75f6f0c987fb0e3687ccbd464cd00c163ea8cb05d2470cfb05adf6535bc488
+    dependencies:
+    - name: espressif/esp_jpeg
+      registry_url: https://components.espressif.com
+      require: public
+      version: ^1.3.1
+    - name: idf
+      require: private
+      version: '>=5.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.1.6
+  espressif/esp_jpeg:
+    component_hash: defb83669293cbf86d0fa86b475ba5517aceed04ed70db435388c151ab37b5d7
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.3.1
+  idf:
+    source:
+      type: idf
+    version: 5.1.1
+  mm_shims:
+    dependencies:
+    - name: idf
+      version: ==5.1.1
+    - name: mmutils
+      path: ../src/mmutils
+      version: ==2.6.4-esp32
+    source:
+      path: J:\wifihalowmodule\Code\MQTT_Video_Stream\framework\mm_shims
+      type: local
+    targets:
+    - esp32s3
+    version: 2.6.4-esp32
+  mmipal:
+    dependencies:
+    - name: idf
+      version: ==5.1.1
+    - name: mmutils
+      path: ../mmutils
+      version: ==2.6.4-esp32
+    source:
+      path: J:\wifihalowmodule\Code\MQTT_Video_Stream\framework\src\mmipal
+      type: local
+    targets:
+    - esp32s3
+    version: 2.6.4-esp32
+  mmiperf:
+    dependencies:
+    - name: idf
+      version: ==5.1.1
+    - name: mmipal
+      path: ../mmipal
+      version: ==2.6.4-esp32
+    source:
+      path: J:\wifihalowmodule\Code\MQTT_Video_Stream\framework\src\mmiperf
+      type: local
+    targets:
+    - esp32s3
+    version: 2.6.4-esp32
+  mmpktmem:
+    dependencies:
+    - name: idf
+      version: ==5.1.1
+    source:
+      path: J:\wifihalowmodule\Code\MQTT_Video_Stream\framework\src\mmpktmem
+      type: local
+    targets:
+    - esp32s3
+    version: 2.6.4-esp32
+  mmutils:
+    dependencies:
+    - name: idf
+      version: ==5.1.1
+    source:
+      path: J:\wifihalowmodule\Code\MQTT_Video_Stream\framework\src\mmutils
+      type: local
+    targets:
+    - esp32s3
+    version: 2.6.4-esp32
+  morselib:
+    dependencies:
+    - name: idf
+      version: ==5.1.1
+    - name: mmpktmem
+      path: ../src/mmpktmem
+      version: ==2.6.4-esp32
+    source:
+      path: J:\wifihalowmodule\Code\MQTT_Video_Stream\framework\morselib
+      type: local
+    targets:
+    - esp32s3
+    version: 2.6.4-esp32
+direct_dependencies:
+- espressif/esp32-camera
+- mm_shims
+- mmipal
+- mmiperf
+- mmutils
+- morselib
+manifest_hash: a0a3a6b7b1e53844521acc9ea26b5313645cfa5ecb0e0f9c4eb26aaef706cb69
+target: esp32s3
+version: 2.0.0

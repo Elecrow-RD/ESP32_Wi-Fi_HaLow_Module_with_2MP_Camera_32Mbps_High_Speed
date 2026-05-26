@@ -1,0 +1,42 @@
+menu "MQTT Configuation"
+
+    config BROKER_URL
+        string "BROKER_URL"
+        default "mqtt://broker.emqx.io:1883"
+        help
+            MQTT broker URI.For your own server, set it ti:
+            mqtt://<server-ip>:1883
+            or
+            mqtts://<server-domain>:1883
+    
+    config BROKER_USERNAME
+        string "BROKER_USERNAME"
+        default ""
+        help
+            Username for MQTT broker authentication. Leave empty if not required.
+    
+    config BROKER_PASSWORD
+        string "BROKER_PASSWORD"
+        default ""
+        help
+            Password for MQTT broker authentication. Leave empty if not required.
+
+    config MQTT_PUBLISH_TOPIC
+        string "PUBLISH TOPIC"
+        default "halow/up"
+        help
+            Topic used by the boaed to publish test message.
+    
+    config MQTT_SBSCRIPTION_TOPIC
+        string "SUBSCRIPTION TOPIC"
+        default ""
+        help
+            Optional topic to subscribe to for receive-path verification.
+            Leave empty to disable subscription.
+    config UPDATE_INTERVAL_MS
+        int "Publish interval(ms)"
+        default 5000
+        range 10 3600000
+        help
+            Interval in milliseconds between each MQTT Test message.
+endmenu

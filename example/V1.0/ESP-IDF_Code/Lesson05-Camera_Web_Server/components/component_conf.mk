@@ -1,0 +1,3 @@
+EXTRA_COMPONENT_DIRS += $(SOLUTION_PATH)/components
+
+

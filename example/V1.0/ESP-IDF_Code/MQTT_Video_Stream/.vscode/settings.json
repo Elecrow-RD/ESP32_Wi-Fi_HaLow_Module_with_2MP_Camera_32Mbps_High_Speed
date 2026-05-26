@@ -1,0 +1,19 @@
+{
+  "idf.openOcdConfigs": [
+    "board/esp32s3-builtin.cfg"
+  ],
+  "idf.espIdfPathWin": "j:\\wifihalowmodule\\esp-idf\\v5.1.1\\esp-idf",
+  "idf.toolsPathWin": "j:\\wifihalowmodule\\tools",
+  "idf.pythonInstallPath": "j:\\wifihalowmodule\\tools\\tools\\idf-python\\3.11.2\\python.exe",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s3"
+  },
+  "clangd.path": "d:\\ESP-IDF\\Espressif\\tools\\esp-clang\\15.0.0-23786128ae\\esp-clang\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=d:\\zinc\\ProjectCode\\2.WiFi Halow\\mm-iot-esp32\\examples\\mqtt2\\build"
+  ],
+  "idf.flashType": "UART",
+  "idf.portWin": "COM14"
+}
